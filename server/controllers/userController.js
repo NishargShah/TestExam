@@ -44,3 +44,9 @@ exports.logout = catchAsync(async(req, res, next) => {
     res.status(205).json({status: 'success'});
 });
 
+exports.getImages = catchAsync(async(req, res, next) => {
+    res.status(200).json({
+        status: 'success',
+        images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg']
+    });
+});

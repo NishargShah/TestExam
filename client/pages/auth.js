@@ -23,12 +23,12 @@ const Auth = ({login, isAuthenticated}) => {
         setLoading(true);
         const res = await login({email, password});
         setLoading(false);
-        if (res) await Router.replace('/app');
+        if (res) window.location.assign('/app');
     };
 
     return (
         <div className="mt-5">
-            <Home sectionClass="loginForm" title="Login" header={false} nav={false}>
+            <Home sectionClass="loginForm" title="Login" nav={false}>
                 <div className="offset-2 col-6 mx-auto">
                     <Form onSubmit={e => onSubmitHandler(e)}>
                         <Form.Group controlId="formBasicEmail">

@@ -7,16 +7,16 @@ import { logout } from "../../store/actions";
 const Navigation = ({auth: {isUserLoaded, isAuthenticated}, logout}) => {
     const regularLinks = (
         <Fragment>
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/auth"><a>Sign In</a></Link>
+            <Link href="/"><a className="mr-2">Home</a></Link>
+            <Link href="/auth"><a className="mr-2">Sign In</a></Link>
         </Fragment>
     );
 
     const authLinks = (
         <Fragment>
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/app"><a>Dashboard</a></Link>
-            <a onClick={logout}>Logout</a>
+            <Link href="/"><a className="mr-2">Home</a></Link>
+            <Link href="/app"><a className="mr-2">Dashboard</a></Link>
+            <a onClick={logout} style={{cursor: 'pointer'}}>Logout</a>
         </Fragment>
     )
 
