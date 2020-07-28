@@ -1,0 +1,41 @@
+.toast_block {
+    position: relative;
+    z-index: 1113;
+
+    .toast_position {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        @include media-breakpoint-down(xs) {
+            left: 0;
+        }
+
+        .toast {
+            width: 15rem;
+            border-radius: 0;
+
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .toast-header {
+                strong {
+                    color: var(--danger);
+                }
+
+                button {
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .toast-body {
+                color: var(--primary);
+            }
+
+        }
+    }
+}
